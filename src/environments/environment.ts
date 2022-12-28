@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   baseUrl: 'https://marketdata.tradermade.com/api/v1',
+  api_key:'rUypnugWs7xjI1Xw1nVv',
 };
 
 /*
