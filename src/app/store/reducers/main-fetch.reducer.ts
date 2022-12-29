@@ -1,5 +1,5 @@
 import {CurrenciesList} from "../models/main.models";
-import {createReducer} from "@ngrx/store";
+import {Action, createReducer} from "@ngrx/store";
 
 export interface MainFetchState {
   currenciesList:CurrenciesList
@@ -13,3 +13,6 @@ const mainFetchInitialState: MainFetchState = {
 export const mainFetchReducer = createReducer(
   mainFetchInitialState,
 )
+export function reducer(state: MainFetchState | undefined, action: Action): any {
+  return mainFetchReducer(state, action);
+}
