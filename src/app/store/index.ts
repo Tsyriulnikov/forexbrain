@@ -1,4 +1,4 @@
-import {mainFetchReducer, MainFetchState} from "./reducers/main-fetch.reducer";
+import {mainFetchReducer, MainFetchState, reducer} from "./reducers/main-fetch.reducer";
 import {ActionReducerMap} from "@ngrx/store";
 
 export interface StateApp {

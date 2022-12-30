@@ -6,7 +6,7 @@ import {CurrenciesList} from "../store/models/main.models";
 @Injectable({
   providedIn: 'root'
 })
-export class FetchMainService {
+export class MainFetchService {
 
   constructor(private http: HttpClient) {
   }
