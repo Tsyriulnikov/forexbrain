@@ -10,18 +10,6 @@ export class MainFetchEffects {
     private mainFetchService: MainFetchService
   ) {
   }
-  getPokemonList$ = createEffect(() =>
-    this.actions$.pipe(
-      ofType(getPokemonList),
-      exhaustMap(action =>
-        this.mainFetchService.getHistoricalCurrenciesList().pipe(
-          map((response) => {
-            return getPokemonListSuccess({response})
-          }),
-          catchError((error: any) => of(getPokemonListFailure(error))))
-      )
-    )
-  );
 
 
 
