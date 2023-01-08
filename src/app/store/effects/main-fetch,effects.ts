@@ -14,18 +14,7 @@ export class MainFetchEffects {
     private mainFetchService: MainFetchService
   ) {
   }
-  getHistoricalCurrenciesList$ = createEffect(() =>
-    this.actions$.pipe(
-      ofType(getHistoricalCurrenciesListAction),
-      exhaustMap(action =>
-        this.mainFetchService.getHistoricalCurrenciesList().pipe(
-          map((response) => {
-            return getHistoricalCurrenciesListSuccessAction({response})
-          }),
-          catchError((error: any) => of(getHistoricalCurrenciesListFailure(error))))
-      )
-    )
-  );
+
 
 
 
