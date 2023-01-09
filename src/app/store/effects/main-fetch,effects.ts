@@ -27,6 +27,18 @@ export class MainFetchEffects {
     )
   );
 
+  getPokemonAbility$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(getPokemonAbility),
+      exhaustMap(action =>
+        this.pokemonListService.getPokemonAbility(action.urlAbility).pipe(
+          map((pokemonAbility) => {
+            return getPokemonAbilitySuccess({pokemonAbility})
+          }),
+          catchError((error: any) => of(getPokemonListFailure(error))))
+      )
+    )
+  );
 
 
 }
