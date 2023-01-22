@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import * as tf from '@tensorflow-';
+import * as tf from '@tensorflow/tfjs';
 @Injectable({
   providedIn: 'root'
 })
